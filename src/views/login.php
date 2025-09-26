@@ -29,7 +29,7 @@
 
         <div class="links">
           <a href="#">Forgot Password</a>
-          <a href="#">Signup</a>
+          <a href="register.php">Signup</a>
         </div>
 
         <p id="loginMsg" aria-live="polite" style="min-height:1em;margin:6px 0 0;color:#f66;"></p>

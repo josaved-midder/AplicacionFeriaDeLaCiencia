@@ -43,4 +43,22 @@ public static function requireLogin(): void {
   }
 }
 
+public static function register(string $username, string $password, ?string $nombre = null): array {
+  $username = trim($username);
+  if ($username === '' || $password === '') {
+    return ['ok' => false, 'message' => 'Usuario y contraseña requeridos.'];
+  }
+  if (strlen($password) < 4) {
+    return ['ok' => false, 'message' => 'La contraseña debe tener al menos 4 caracteres.'];
+  }
+  if (UserModel::existsByUsername($username)) {
+    return ['ok' => false, 'message' => 'El usuario ya existe.'];
+  }
+
+  $hash = password_hash($password, PASSWORD_DEFAULT);
+  $id = UserModel::create($username, $hash, $nombre);
+  return ['ok' => true, 'id' => $id];
+}
+
+
 }
