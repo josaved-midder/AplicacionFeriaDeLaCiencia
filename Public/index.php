@@ -1,23 +1,16 @@
 <?php
 declare(strict_types=1);
 
-// Normaliza la ruta aunque la app esté en subcarpeta
+// Normaliza la ruta aunque la app esté en subcarpeta (p.ej. /AplicacionFeriaDeLaCiencia/Public)
 $path  = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);             // p.ej. /.../Public/index.php
 $base  = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');                  // p.ej. /.../Public
 $route = preg_replace('#^' . preg_quote($base, '#') . '#', '', $path);  // p.ej. /index.php o /login
-$route = rtrim($route, '/');
+$route = ltrim($route, '/');
 
-// Tratar index.php como raíz
-if ($route === '' || $route === 'index.php') {
-  $route = '/';
-} else {
-  // Si viene con .php (login.php, register.php…), quita la extensión
-  if (substr($route, -4) === '.php') {
-    $route = '/' . basename($route, '.php'); // -> /login, /register, /dashboard
-  } elseif ($route[0] !== '/') {
-    $route = '/' . $route;
-  }
-}
+// Tratar index.php como raíz y quitar extensión .php en rutas
+if ($route === '' || $route === 'index.php') $route = '/';
+if (substr($route, -4) === '.php') $route = '/' . basename($route, '.php');
+if ($route[0] !== '/') $route = '/' . $route;
 
 switch ($route) {
   // Vistas

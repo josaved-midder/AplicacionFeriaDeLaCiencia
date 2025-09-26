@@ -1,5 +1,4 @@
 <?php
-// src/services/db.php
 declare(strict_types=1);
 
 function db(): PDO {

@@ -233,3 +233,31 @@ section .signin .content .form .actions .btn.outline {
   color: #fff;
   opacity: .9;
 }
+/* Subir label cuando el input es readonly (p.ej. en dashboard) */
+.signin .content .form .inputBox input[readonly] ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+  opacity: .9;
+}
+
+/* Botones <a> en acciones del dashboard */
+section .signin .content .form .actions .btn {
+  flex: 1;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  background: #0f0;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 4px;
+}
+section .signin .content .form .actions .btn.outline {
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+}
+section .signin { width: 520px; border-radius: 8px; } /* tarjeta un poco más grande en dashboard */
