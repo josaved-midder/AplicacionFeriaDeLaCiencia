@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+     width: 100%;
+     min-height: 120vh;
+     background-image: url(home-images/Login\ IMAGEN.jpg);
+     background-position: center;
+     background-size: cover;
+
+
+
+    }
+
+    .login-container {
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #66a6ff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #558de8;
+    }
+
+    .register-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .register-link a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+    .back-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-button a {
+  display: inline-block;
+  background-color: #a3c7d6; /* azul pastel */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+  background-color: #82acc0; /* tono un poco más oscuro al pasar el cursor */
+}
+
+  </style>
+</head>
+<header></header>
+<body>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form>
+      <input type="text" placeholder="Usuario" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit">Ingresar</button>
+    </form>
+    <div class="register-link">
+      ¿No tienes cuenta? <a href="Registro.html">Regístrate</a>
+    </div>
+    <div class="back-button">
+  <a href="index.html">← Volver al inicio</a>
+</div>
+
+  </div>
+</body>
+</html>

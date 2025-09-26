@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #eeee7a, #d18dae);
+      color: #333;
+    }
+
+   nav {
+      background: linear-gradient(120deg, var(--oscuro), var(--morado));
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #ebeb79;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: var(--naranja);
+    }
+
+
+    header {
+      background: linear-gradient(120deg, #fa709a, #fee140);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+      border-bottom: 5px solid #fdbb2d;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .contact-section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #c94f7c;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      color: #6e1b4e;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-form textarea {
+      grid-column: 1 / 3;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      grid-column: 1 / 3;
+      background: linear-gradient(120deg, #fa709a, #fee140);
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(120deg, #f5576c, #f093fb);
+      transform: scale(1.05);
+    }
+
+    .info-extra {
+      text-align: center;
+      margin-top: 2rem;
+      color: #000000;
+    }
+
+    .info-extra i {
+      margin-right: 0.5rem;
+      color: #c94f7c;
+    }
+
+    .mapa {
+      margin-top: 3rem;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .social-icons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #6e1b4e;
+      font-size: 1.8rem;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #fa709a;
+      transform: scale(1.2);
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #63268b;
+      font-size: 0.9rem;
+      color: #dbdbdb;
+      border-top: 1px solid #ffc0cb;
+          }
+          nav {
+  background-color: #382755;
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #7a9e9f; /* azul verdoso pastel */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #a8d5ba; /* verde pastel más claro */
+  color: #355c7d; /* azul oscuro suave */
+}
+
+/* Íconos FontAwesome en tonos pastel */
+nav ul li a i {
+  color: #f5b7b1; /* rosa pastel suave para íconos */
+}
+
+
+    @media (max-width: 768px) {
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form textarea,
+      .contact-form button {
+        grid-column: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="Psicologia.html"><i class="fa fa-brain"></i> Psicología</a></li>
+      <li><a href="Sexualidad.html"><i class="fa fa-heart"></i> Sexualidad</a></li>
+      <li><a href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a></li>
+      <li><a href="inicio De Sesion.html"><i class="fa fa-user"></i> Iniciar Sesión</a></li>
+    </ul>
+    
+  </nav>
+
+  <header class="contact-header">
+  <h1>📬 Contáctanos</h1>
+  <p>¿Tienes alguna consulta? No dudes en escribirnos 💌</p>
+</header>
+
+
+  <section class="contact-section">
+    <h2>Formulario de Contacto</h2>
+    <form class="contact-form" method="post" action="procesacontacto.php">
+      <div>
+        <label for="nombre">Nombre lkjdshdfjvhjdfy</label>
+        <input type="text" name ="nombre" id="nombre" placeholder="Tu nombre" required>
+      </div>
+      <div>
+        <label for="email">Correo electronico</label>
+        <input type="email" name ="correo" id="email" placeholder="correo@ejemplo.com" required>
+      </div>
+      <div>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" name ="numero" id="telefono" placeholder="Ej. +57 604654321">
+      </div>
+      <div>
+        <label for="asunto">Asunto</label>
+        <input type="text" name ="asunto" id="asunto" placeholder="Motivo del mensaje" required>
+      </div>
+      <div>
+        <label  for="mensaje">Mensaje</label>
+        <textarea name ="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      </div>
+      <button type="submit"><i class="fa fa-paper-plane"></i> Enviar</button>
+    </form>
+
+    <div class="info-extra">
+      <p><i class="fa fa-phone"></i> 3156525500</p>
+      <p><i class="fa fa-envelope"></i> erosianjss@gmail.com</p>
+      <p><i class="fa fa-map-marker-alt"></i> bello,Antioquia</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="mapa">
+      <iframe 
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.764585785953!2d-75.56155621164353!3d6.325396998416039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f0f2dd6274d%3A0xc656058937ac4414!2sInstituci%C3%B3n%20Educativa%20Tomas%20Cadavid%2C%20Bello%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1752871578519!5m2!1ses-419!2sco" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Educación Sexual y Psicología. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

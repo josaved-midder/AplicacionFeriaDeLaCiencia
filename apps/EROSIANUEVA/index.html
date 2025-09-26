@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erosia</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="home-images/erosia_logo_32x32_8bit.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+
+  <style>
+
+    
+    :root {
+      --naranja: #f59e0b;
+      --morado: #6b21a8;
+      --claro: #fff7f1;
+      --oscuro: #2d0c3a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      background: linear-gradient(120deg, #fa709a, #fee140);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+      border-bottom: 5px solid #fdbb2d;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--claro);
+      color: #000000;
+    }
+
+   nav {
+  background: linear-gradient(120deg, var(--oscuro), var(--morado));
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: var(--naranja);
+}
+nav {
+  background-color: #f7d7e3; /* rosa pastel */
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #f5f8c6; /* azul verdoso pastel */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #f7fdc1; /* verde pastel más claro */
+  color: #eec7bd; /* azul oscuro suave */
+}
+
+nav ul li a i {
+  color: #f3b1f5; /* rosa pastel suave para íconos */
+}
+
+    header {
+       background: linear-gradient(120deg, #fa709a, #fee140);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+      border-bottom: 5px solid #fdbb2d;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+    
+
+    header p {
+      font-size: 1.3rem;
+    }
+       
+
+        .carousel-container {
+      position: relative;
+      max-width: 900px;
+      height: 500px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    
+   .imagen-centrada {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.imagen-centrada img {
+  max-width: 90%;
+  width: 350px;
+  border-radius: 12px;
+}
+
+   
+   
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #470672;
+      font-size: 0.9rem;
+      color: #dbdbdb;
+      border-top: 1px solid #ffc0cb;
+    }
+
+ .testimonial-section {
+  .container-testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: url(./images/bg-3.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.testimonial-card {
+  background: linear-gradient(120deg, #fa709a, #fee140);
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #000000;
+}
+
+.testimonial-card h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.info-extra{
+   position: relative;
+  padding: 16px 20px; /* espacio interior para que el contenido no quede sobre los bordes */
+  margin: 24px 0;
+  background: #0a0909;
+  border-left: 8px solid #6a0dad;   /* borde izquierdo morado */
+  border-right: 8px solid #ff8c00;  /* borde derecho naranja */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* para resaltar la separación con el fondo */
+  border-radius: 6px;
+}
+
+}
+
+.info-extra{ position: relative;
+  padding: 20px 30px; /* espacio interior para que el contenido no quede sobre los bordes */
+  margin: 30px 0;
+  background: #fff;
+  border-left: 13px solid #6a0dad;   /* borde izquierdo morado */
+  border-right: 13px solid #ff8c00;  /* borde derecho naranja */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* para resaltar la separación con el fondo */
+  border-radius: 6px;}
+  
+.info-extra h2 {
+  color: rgb(241, 135, 13);
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  
+}
+
+.info-extra p {
+  font-size: 1.1rem;
+  color: #000000;
+  margin: 1rem auto;
+  max-width: 800px;
+  
+}
+
+.info-lista {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.info-lista li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #000000;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.info-lista li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #ff69b4;
+}
+
+.links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.links a {
+  text-decoration: none;
+  background: #000000;
+  color: #000000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.links a:hover {
+  background: #c94f7c;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="Psicologia.html"><i class="fa fa-brain"></i> Psicología</a></li>
+      <li><a href="Sexualidad.html"><i class="fa fa-heart"></i> Sexualidad</a></li>
+      <li><a href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a></li>
+      <li><a href="inicio De Sesion.html"><i class="fa fa-user"></i> Iniciar Sesión</a></li>
+    </ul>
+  </nav>
+
+  <header class="sexualidad-header">
+<h1>🧠EROSIA❤️</h1>
+  <p>Infórmación a tu alcance.</p>
+</header>
+<section>
+  <div class="carousel-container">
+    <div class="slides">
+      <div class="slide"><img src="home-images/portadaaa.jpeg" alt="Slide 1"></div>
+      <div class="slide"><img src="home-images/portaba2.jpeg" alt="Slide 2"></div>
+      <div class="slide"><img src="home-images/portadaa3.jpeg" alt="Slide 3"></div>
+     
+    </div>
+    <div class="controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </div>
+ 
+  <section class="mental-health">
+ 
+
+
+
+
+
+
+  <!-- Sección de testimonios -->
+  <section class="testimonial-section">
+    <center><h2>CREADORES</h2></center>
+    <div class="container-testimonials">
+      <div class="testimonial-card">
+        <img src="home-images/hero.jpg" alt="Persona 1" />
+        <h4 class="q-head">Nikol casafus</h4>
+        <p></p>
+      </div>
+      <div class="testimonial-card">
+        <img src="home-images/hero.jpg" alt="Persona 2" />
+        <h4 class="q-head">Josue Cordoba</h4>
+        <p></p>
+      </div>
+      <div class="testimonial-card">
+        <img src="home-images/hero.jpg" alt="Persona 3" />
+        <h4 class="q-head">Salome Quiñones</h4>
+        <p></p>
+      </div>
+      <div class="testimonial-card">
+        <img src="home-images/hero.jpg" alt="Persona 4" />
+        <h4 class="q-head">Sebastian ospina</h4>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+ <script>
+  const slides = document.querySelector('.slides');
+  const slide = document.querySelectorAll('.slide');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slideWidth = slide[0].clientWidth;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slide.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+    showSlide(currentIndex);
+  }
+
+  next.addEventListener('click', nextSlide);
+  prev.addEventListener('click', prevSlide);
+
+  // Automático cada 2 segundos
+  setInterval(nextSlide, 5000);
+</script>
+                   
+</body>                
+
+  <section class="info-extra">
+ <center> <h2>¿Por qué elegirnos?</h2></center> 
+  <p>
+    En nuestra plataforma encontrarás un espacio seguro, confiable y lleno de empatía. Estamos comprometidos con ofrecer información actualizada, accesible y validada por expertos en psicología, salud y sexualidad. 
+    Nos apasiona acompañarte en tu proceso de aprendizaje, autocuidado y desarrollo personal.
+  </p>
+ <div class="imagen-centrada">
+  <img src="home-images/elegirnos.jpg" alt="Imagen" />
+</div>
+
+   <center> <h2>¿Qué encontrarás aquí?</h2></center> 
+  <ul class="info-lista">
+    <li>🌸 Artículos y guías educativas en lenguaje claro y comprensible.</li>
+    <li>💬 Atención personalizada por profesionales especializados.</li>
+    <li>📚 Recursos descargables, infografías y ejercicios prácticos.</li>
+    <li>🤝 Comunidad de apoyo empática y sin prejuicios.</li>
+  </ul>
+<div class="imagen-centrada">
+  <img src="home-images/encontraras.jpg" alt="Imagen" />
+</div>
+
+<center> <h2>Nuestros Servicios</h2></center>
+  <ul class="info-lista">
+    <li>🧠 Asesoramiento psicológico.</li>
+    <li>❤️ Educación sexual integral.</li>
+    <li>📦 Recomendaciones y catálogo de productos de cuidado personal.</li>
+    <li>📞 Canales de contacto directo con especialistas.</li>
+  </ul>
+<div class="imagen-centrada">
+  <img src="home-images/servicio.jpg" alt="Imagen" />
+</div>
+
+  <center> <h2>Nuestra Misión</h2></center>
+  <p>
+    Fomentar una educación integral en sexualidad y salud mental con una visión inclusiva, confiable y transformadora, ayudando a derribar mitos y barreras que afectan el bienestar emocional y físico.
+  </p>
+<div class="imagen-centrada">
+  <img src="home-images/vision.jpg" alt="Imagen" />
+</div>
+
+<center> <h2>Nuestra Visión</h2></center>
+  <p>
+    Ser la plataforma educativa de referencia en el mundo hispano, donde cada persona encuentre acompañamiento, información útil y herramientas para vivir en plenitud y con conocimiento.
+  </p>
+<div class="imagen-centrada">
+  <img src="home-images/visionr.jpeg" alt="Imagen" />
+</div>
+
+  <script>
+    const frases = [
+      "Tu bienestar emocional es importante.",
+      "Infórmate, cuida y ama tu cuerpo.",
+      "La educación sexual es libertad.",
+      "Estamos aquí para escucharte y apoyarte."
+    ];
+    let index = 0;
+    const contenedor = document.getElementById("frase-dinamica");
+
+    function cambiarFrase() {
+      contenedor.textContent = frases[index];
+      index = (index + 1) % frases.length;
+    }
+
+    cambiarFrase();
+    setInterval(cambiarFrase, 5000);
+  </script>
+
+  
+</body>
+</html>
+<footer>
+  <p>
+    &copy; 2025 <strong>Educación Sexual y Psicología</strong> — Promoviendo el conocimiento con respeto y empatía 💡💖<br>
+    Todos los derechos reservados.
+  </p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.twitter.com" target="_blank" title="X/Twitter"><i class="fa fa-twitter"></i></a>
+    <a href="mailto:contacto@educacionpsicosexual.com" title="Correo"><i class="fa fa-envelope"></i></a>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</footer>
+</html>
+
