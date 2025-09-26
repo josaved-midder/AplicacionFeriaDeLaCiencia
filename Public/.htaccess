@@ -1,0 +1,9 @@
+# Enruta todo a index.php excepto archivos/carpetas reales
+RewriteEngine On
+
+# Cambia esta base si tu app no está exactamente en /AplicacionFeriaDeLaCiencia/Public
+RewriteBase /AplicacionFeriaDeLaCiencia/Public/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

@@ -40,6 +40,14 @@ switch ($route) {
     require __DIR__ . '/api/logout.php';
     break;
 
+  case '/donex':
+  require __DIR__ . '/../apps/donex/index.php';
+  break;
+case '/erocianueva':
+  require __DIR__ . '/../apps/erocianueva/index.php';
+  break;
+
+
   default:
     http_response_code(404);
     echo '404';

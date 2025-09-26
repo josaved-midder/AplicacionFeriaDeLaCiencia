@@ -30,28 +30,25 @@ if (!$user) { header('Location: ' . rtrim(dirname($_SERVER['SCRIPT_NAME']), '/')
     <div class="signin">
       <div class="content">
         <h2 class="headline">DASHBOARD</h2>
+<form class="form" onsubmit="return false">
+  <?php
+    $nombre = trim((string)($user['nombre'] ?? ''));
+    $saludo = $nombre !== '' ? $nombre : $user['username'];
+  ?>
+  <div class="inputBox">
+    <input type="text" value="¡Hola, <?= htmlspecialchars($saludo) ?>! 👋" readonly placeholder=" ">
+    <i>Bienvenido</i>
+  </div>
 
-        <form class="form" onsubmit="return false">
-          <div class="inputBox">
-            <input type="text" value="<?= htmlspecialchars((string)$user['id']) ?>" readonly placeholder=" ">
-            <i>ID</i>
-          </div>
+  <!-- Menú de acciones -->
+  <div class="inputBox actions" style="display:flex; flex-direction:column; gap:12px;">
+    <a class="btn" href="../apps/donex/"  >Ir a Donex</a>
+    <a class="btn" href="../apps/erocianueva/">Ir a ErociaNueva</a>
+    <a class="btn outline" href="api/logout">Cerrar sesión</a>
+  </div>
+</form>
 
-          <div class="inputBox">
-            <input type="text" value="<?= htmlspecialchars($user['username']) ?>" readonly placeholder=" ">
-            <i>Usuario</i>
-          </div>
-
-          <div class="inputBox">
-            <input type="text" value="<?= htmlspecialchars($user['nombre'] ?? '') ?>" readonly placeholder=" ">
-            <i>Nombre</i>
-          </div>
-
-          <div class="inputBox actions">
-            <a class="btn" href="dashboard">Refrescar</a>
-            <a class="btn outline" href="api/logout">Cerrar sesión</a>
-          </div>
-        </form>
+        
       </div>
     </div>
   </section>
